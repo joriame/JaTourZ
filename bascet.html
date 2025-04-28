@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JaTour</title>
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/basket.css">
+    
+        <!-- Josefin Slab -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    
+        <!-- Jost -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <!-- Иконки -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+        <!-- Иконка на вкладке -->
+        <link rel="icon" href="assets/img/logo.png" type="image/png">
+    </head>
+<body>
+
+    <header>
+
+        <div class="logo">
+            <img src="assets/img/logo_1.png" alt="">
+            <h1>JaTour</h1>
+        </div>
+
+        <div class="nav">
+            <a class="pasive" href="index.html">Главная</a>
+            <a class="pasive" href="catalog.html">Все туры</a>
+            <a class="pasive" href="signup.html">Войти</a>
+            <a class="pasive" href="#contact">Контакты</a>
+            <div class="btn_price">
+                <a class="btn_basket" href="tikets.html"><i class='bx bx-collection'></i></a>
+                <a class="btn_basket" href="bascet.html"><i class='bx bxs-basket'></i></a>
+            </div>
+        </div>
+
+        <!-- Кнопка вызова меню навигации для мобильных устройств -->
+        <button class="mobile-navigation" popovertarget="my-popover"><i class='bx bx-menu'></i></button>
+
+        <!-- Меню навигации для мобильных устройств -->
+        <div id="my-popover" popover>
+            <button class="btn-close" popovertarget="my-popover" popovertargetaction="hide"><i class='bx bx-minus'></i></button> 
+            <div class="mobnav">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Все туры</a>
+            <a href="signup.html">Войти</a>
+            <a href="tikets.html">Билеты</a>
+            <a href="bascet.html">Корзина</a>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- Корзина -->
+    <section class="basket">
+
+        <div class="title">
+            <h1>Корзина</h1>
+        </div>
+
+        <div class="conteiner_basket">
+            
+            <div class="conteiner_food_basket">
+
+                <div class="card_basket">
+                    <div class="img_card">
+                        <img src="assets/img/card1.jpg" alt="">
+                    </div>
+                    <div class="info_basket">
+                        <div class="trash">
+                        <h2>Токио тур</h2>
+                            <div class="btn_trash"><i class='bx bxs-trash'></i></div>
+                        </div>
+                        <h3>Тур по столице Японии - Токио, 8  дней.</h3>
+                        <div class="vec_basket">
+                            <div><button class="redact"><i class='bx bx-minus' ></i></button></div>
+                            <div><h4>1 билет</h3></div>
+                            <div><button class="redact"><i class='bx bx-plus'></i></button></div>
+                        </div>
+                        <div class="price_basket"><h2>100,000 ₽</h2></div>
+                    </div>  
+                </div>
+
+                <div class="card_basket">
+                    <div class="img_card">
+                        <img src="assets/img/card2.jpg" alt="">
+                    </div>
+                    <div class="info_basket">
+                        <div class="trash">
+                        <h2>Фудзи тур</h2>
+                            <div class="btn_trash"><i class='bx bxs-trash'></i></div>
+                        </div>
+                        <h3>Тур на самый известный вулкан в Японии - Фудзи, 6 дней</h3>
+                        <div class="vec_basket">
+                            <div><button class="redact"><i class='bx bx-minus' ></i></button></div>
+                            <div><h4>2 билета</h3></div>
+                            <div><button class="redact"><i class='bx bx-plus'></i></button></div>
+                        </div>
+                        <div class="price_basket"><h2>440,000 ₽</h2></div>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="card_basket_info">
+
+                <h2>У вас 2 товара</h2>
+
+                <div class="info_bs">
+                    <div>
+                        <h3>Количество:</h3>
+                        <h3>Суммарно дней:</h3>
+                        <h3>Сумма заказа:</h3>
+                    </div>
+                    <div class="text_right">
+                        <h3>3 билета</h3>
+                        <h3>14 дн</h3>
+                        <h3>540,000 ₽</h3>
+                    </div>
+                </div>
+
+                <div class="btn_con">
+                    <div class="btn_basket_info_con"><button class="btn_basket_info">Оформить заказ</button></div>
+                    <div class="btn_basket_info_con"><button class="btn_basket_info">Посмотреть ещё</шbutton></div>
+                    <div class="con_clear"><a href="bascet_clear.html">Очистить корзину</a></div>
+                </div>
+            </div>
+
+    </section>
+
+
+    <!-- Подвал -->
+    <footer>
+        <div class="info_ft" id="contact">
+            <h1>Контакты</h1>
+            <h3>Телефон: +7 (986) 124 35 66</h3>
+            <h3>Почта: JaTour@gmail.com</h3>
+            <h3>Адрес: Пр. Мира 40</h3>
+        </div>
+        <div class="logo_jp">
+            <a href="https://web.telegram.org/k/" target="_blank"><i class='bx bxl-telegram'></i></a>
+            <a href="https://www.tiktok.com" target="_blank"><i class='bx bxl-tiktok'></i></a>
+            <a href="https://vk.com/feed" target="_blank"><i class='bx bxl-vk'></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>

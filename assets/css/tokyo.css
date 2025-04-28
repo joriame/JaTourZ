@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+    --color-header: #f4efec;
+    --color-text: #cdc6c3;
+    --gallery-gap: calc(var(--index) * 7.5);
+}
+
+html {
+    font-family: Jost, sans-serif;
+}
+
+/* will-change */
+.content, .hero, .main-header, .gallery > * {
+	will-change: transform;
+}
+
+body {
+    background-size: 50px;
+    font-family: Jost, sans-serif;
+    color: #fafafa;
+    overflow-x: hidden;
+    background: linear-gradient(17deg, rgba(0,0,2,1) 0%, rgba(156,115,166,1) 56.99999999999999%, rgba(0,0,2,1) 100%);
+}
+
+.portfolio_2 {
+    display: none;
+}
+
+/* Header */
+.hero {
+    width: calc(var(--index) * 40);
+    position: absolute;
+    left: 40vw;
+    top: 1vh;
+    z-index: -1;
+}
+
+.main-header {
+    height: 100vh;
+}
+
+.container {
+    padding: 0 7vw;
+}
+
+.main-title {
+    font-size: calc(var(--index) * 8);
+    font-family: Josefin Slab, sans-serif;
+    position: absolute;
+    width: min-content;
+    bottom: 12vh;
+    line-height: .9;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    padding: calc(var(--index) * 8) 0;
+}
+
+.gallery > *{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gallery__item {
+    max-width: calc(var(--index) * 21);
+    margin-bottom: var(--gallery-gap);
+    max-height: 180vh;
+    border-radius: 8px;
+}
+
+.gallery__left {
+    margin-top: calc(var(--gallery-gap) * 1.75);
+}
+
+.gallery__right .gallery__item {
+    margin: 0;
+    margin-top: var(--gallery-gap);
+}
+
+.text-block {
+    color: var(--color-text);
+    position: relative;
+}
+
+.text-block__h {
+    font-family: Josefin Slab, sans-serif;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: var(--color-header);
+    margin-bottom: 1.5rem;
+}
+
+.text-block__p {
+    line-height: 1.75;
+}
+
+.gallery__right .gallery__item2 {
+    margin: 0;
+    margin-top: calc(var(--gallery-gap) * 0.4);
+}
+
+.text-block__h2 a{
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    color: var(--color-header);
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all .2s ease-in-out;
+}
+
+.text-block__h2 a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* Адаптив */
+
+@media screen and (max-width: 1326px){
+
+    .portfolio {
+        display: none;
+    }
+    
+    .portfolio_2 {
+        display: flex;
+    }
+    
+    .gallery_2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .gallery_2 img {
+        max-width: 800px;
+        min-width: 400px;
+        margin-bottom: 50px;
+    }
+    
+    .gallery_2 h2 {
+        text-align: center;
+        font-size: calc(var(--index) * 2);
+    }
+    
+    .gallery_2 p {
+        text-align: center;
+        padding: 0 80px;
+        font-size: calc(var(--index) * 1.2);
+        margin-bottom: 30px;
+    }
+    
+    .hero {
+        width: calc(var(--index) * 30);
+        position: absolute;
+        left: 30vw;
+        top: 10vh;
+        z-index: -1;
+    }
+
+    .text-block__h2 {
+        margin-bottom: 150px;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+
+    html {
+        overflow-x: hidden;
+    }
+
+    .main-header {
+        height: 50vh;
+    }
+
+    .portfolio {
+        display: none;
+    }
+
+    .hero_section {
+        position: relative;
+    }
+
+    .portfolio_2 {
+        display: flex;
+        position: relative;
+    }
+
+    .gallery_2 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .gallery_2 img {
+        max-width: 300px;
+        margin-bottom: 50px;
+    }
+
+    .gallery_2 h2 {
+        text-align: center;
+        font-size: calc(var(--index) * 2);
+    }
+
+    .gallery_2 p {
+        text-align: center;
+        padding: 0 20px;
+        font-size: calc(var(--index) * 1.2);
+        margin-bottom: 30px;
+    }
+
+    .hero {
+        width: calc(var(--index) * 30);
+        position: relative;
+        opacity: .6;
+        z-index: 1;
+    }
+
+}

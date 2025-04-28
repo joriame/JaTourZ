@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JaTour</title>
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/tikets.css">
+    
+        <!-- Josefin Slab -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    
+        <!-- Jost -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <!-- Иконки -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+        <!-- Иконка на вкладке -->
+        <link rel="icon" href="assets/img/logo.png" type="image/png">
+    </head>
+<body>
+
+    <header>
+
+        <div class="logo">
+            <img src="assets/img/logo_1.png" alt="">
+            <h1>JaTour</h1>
+        </div>
+
+        <div class="nav">
+            <a class="pasive" href="index.html">Главная</a>
+            <a class="pasive" href="catalog.html">Все туры</a>
+            <a class="pasive" href="signup.html">Войти</a>
+            <a class="pasive" href="#contact">Контакты</a>
+            <div class="btn_price">
+                <a class="btn_basket" href="tikets.html"><i class='bx bx-collection'></i></a>
+                <a class="btn_basket" href="bascet.html"><i class='bx bxs-basket'></i></a>
+            </div>
+        </div>
+
+        <!-- Кнопка вызова меню навигации для мобильных устройств -->
+        <button class="mobile-navigation" popovertarget="my-popover"><i class='bx bx-menu'></i></button>
+
+        <!-- Меню навигации для мобильных устройств -->
+        <div id="my-popover" popover>
+            <button class="btn-close" popovertarget="my-popover" popovertargetaction="hide"><i class='bx bx-minus'></i></button> 
+            <div class="mobnav">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Все туры</a>
+                <a href="signup.html">Войти</a>
+                <a href="tikets.html">Билеты</a>
+                <a href="bascet.html">Корзина</a>
+            </div>
+        </div>
+
+    </header>
+
+
+    <section class="tickets">
+
+        <h1>Билеты на мероприятия</h1>
+        
+        <div class="event">
+            <div class="ticket">
+                <h2>Концерт группы XYZ в Токио</h2>
+                <button onclick="toggleTicket('concert')">Показать/Скрыть билет</button>
+            </div>
+            <img id="concert-ticket" src="assets/img/ticket_11.png" alt="Билет на концерт группы XYZ">
+            <div id="concert-description" class="event-description">
+                <p>Дата: 25 декабря 2025 года</p>
+                <p>Место: Дворец спорта</p>
+                <p>Описание: Не пропустите уникальную возможность увидеть группу XYZ вживую!</p>
+            </div>
+        </div>
+        
+        <div class="event">
+            <div class="ticket">
+                <h2>Театральная постановка "Сон в летнюю ночь" в Киото</h2>
+                <button onclick="toggleTicket('theater')">Показать/Скрыть билет</button>
+            </div>
+            <img id="theater-ticket" src="assets/img/ticket_11.png" alt="Билет на театральную постановку">
+            <div id="theater-description" class="event-description">
+                <p>Дата: 15 января 2025 года</p>
+                <p>Место: Театр Минами-дза</p>
+                <p>Описание: Погрузитесь в волшебный мир Шекспира!</p>
+            </div>
+        </div>
+        
+        <div class="event">
+            <div class="ticket">
+                <h2>Выставка современного искусства в Киото</h2>
+                <button onclick="toggleTicket('art')">Показать/Скрыть билет</button>
+            </div>
+            <img id="art-ticket" src="assets/img/ticket_11.png" alt="Билет на выставку современного искусства">
+            <div id="art-description" class="event-description">
+                <p>Дата: 10 февраля 2025 года</p>
+                <p>Место: Галерея современного искусства</p>
+                <p>Описание: Откройте для себя новые грани искусства на выставке современных художников!</p>
+            </div>
+        </div>
+        
+        <div class="event">
+            <div class="ticket">
+                <h2>Фестиваль уличной еды в Токио</h2>
+                <button onclick="toggleTicket('food')">Показать/Скрыть билет</button>
+            </div>
+            <img id="food-ticket" src="assets/img/ticket_11.png" alt="Билет на фестиваль уличной еды">
+            <div id="food-description" class="event-description">
+                <p>Дата: 5 марта 2025 года</p>
+                <p>Место: Центральный парк</p>
+                <p>Описание: Присоединяйтесь к нам на фестивале, где вы сможете попробовать блюда со всего мира!</p>
+            </div>
+        </div>
+        
+        <script>
+            function toggleTicket(eventType) {
+                const ticketImage = document.getElementById(eventType + '-ticket');
+                const description = document.getElementById(eventType + '-description');
+        
+                // Переключаем видимость изображения и описания
+                if (ticketImage.style.display === 'block') {
+                    ticketImage.style.display = 'none';
+                    description.style.display = 'none';
+                } else {
+                    ticketImage.style.display = 'block';
+                    description.style.display = 'block';
+                }
+            }
+        </script>
+        
+    </section>
+
+    
+    <!-- Подвал -->
+    <footer>
+        <div class="info_ft" id="contact">
+            <h1>Контакты</h1>
+            <h3>Телефон: +7 (986) 124 35 66</h3>
+            <h3>Почта: JaTour@gmail.com</h3>
+            <h3>Адрес: Пр. Мира 40</h3>
+        </div>
+        <div class="logo_jp">
+            <a href="https://web.telegram.org/k/" target="_blank"><i class='bx bxl-telegram'></i></a>
+            <a href="https://www.tiktok.com" target="_blank"><i class='bx bxl-tiktok'></i></a>
+            <a href="https://vk.com/feed" target="_blank"><i class='bx bxl-vk'></i></a>
+        </div>
+    </footer>
+    
+</body>
+</html>
